@@ -1,0 +1,113 @@
+
+    @font-face {
+        font-family: 'Lora_Italic';
+        src: url(font/Lora-Italic-VariableFont_wght.ttf) format('truetype');
+    }
+    *{margin: 0; padding: 0;
+        font-family: Lora_Italic;
+        letter-spacing: 1px;
+    }
+
+    a {text-decoration: none; color: black;}
+    a:visited{color:black;}
+    li{list-style: none;}
+    body{background-color: white;}
+    
+    #myCanvas{
+         margin-left: 36%;
+    }
+    #wrap{
+        overflow-x: auto;
+        overflow-y: auto;
+        white-space: nowrap;
+        height: auto;
+        background-color: white;}
+
+    /*헤더*/
+    #header{
+        text-shadow: 1px 1px 12px #ffdd70;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        height: 50px;
+        text-align: center;
+    }
+    /*사이드*/
+    #navi{
+        margin-left: 25px;
+        background: white;
+        float: left;
+        width: 220px;
+    }
+
+    /*시계*/
+    #clock{
+        font-size : 25px;
+    }
+
+    /*날짜*/
+    #tdate{
+        font-size : 20px;
+    }
+
+    /*메인 타이틀*/
+    .profile{
+        padding: 10px;
+    }
+    .title{
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .maintitle {
+        text-align: center;
+        font-size: 20px;
+        color: #181818;
+    }
+    .subtitle {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 15px; font-weight:400;
+        color:#383838;
+    }
+
+    /*사이드메뉴 항목*/
+    .menu{
+        padding-top: 30px;
+        border-top: 3px dashed lightgrey;
+    }
+    .menu-item{
+        border-radius:2px;
+        position: relative;        
+    }
+    .menu-item:hover {
+        background: rgb(78, 74, 54);
+        
+    }   
+    .menu-title {
+        display: block;
+        height: 20px;
+        text-align: center;
+        padding: 10px 20px;
+    }   
+    .menu-title:hover {
+        display: block;
+        height: 20px; 
+        text-align: center;
+        padding: 10px 20px;
+        color: whitesmoke;
+    }
+
+    /*본문*/
+    .content {
+        text-align: center;
+    }
+    .aside {
+        margin-left: 50px;
+    }
+
+    /*footer*/
+    #main-footer{
+        clear: both;
+        text-align: center;
+        font-size:10px;
+        padding-top: 10px;
+    }

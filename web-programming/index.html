@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="default.css"/>
+        <style>
+            nav{text-align: center; margin-top: 50px; margin-bottom: 30px;}
+            nav ul{display: inline-block; float: none; vertical-align: center; text-align: center;}
+            nav ul li{float: left; display:inline; font: 12px; padding:0 10px;}
+            .index-menu-title {display: block; height: 20px; text-align: center; padding: 10px 20px;}   
+            .index-menu-title:hover {display: block; height: 20px; text-align: center; padding: 10px 20px; color: rgb(6, 63, 148);}
+            #index-link{padding: 10px; text-align: center; margin-top: 20px; margin-bottom: 20px;}
+            article{text-align: center; margin-bottom: 20px; padding: 20px;}
+        </style>
+        <title>home</title>
+    </head>
+    <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+        <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="info.html"><span class="index-menu-title">Info</span></a>
+                </li>
+                <li>
+                    <a href="work.html"><span class="index-menu-title">My Work</span></a>
+                </li>
+                <li>
+                    <a href="favorite.html"><span class="menu-title">My Favorite</span></a>
+                </li>
+                <li>
+                    <a href="stamp.php"><span class="index-menu-title">Stamp</span></a>
+                </li>
+            </ul>            
+        </nav>
+    </header>
+        <article>
+            <embed width="720" height="404" value="1" src="images/index/index_video.mp4" frameborer="0"></br></br>
+        </article>
+        <canvas id="myCanvas" width="360" height="100"></canvas>
+        <div id="index-link">
+            <a href="https://www.instagram.com/ffdd50_/"><img src="images/profile_icon/insta.png" width="30px" height="30px"></a>
+            <a href="https://www.facebook.com/l23584654/"><img src="images/profile_icon/fb.png" width="30px" height="30px"></a>
+            <a href="mailto:jg3012@sookmyung.ac.kr"><img src="images/profile_icon/mail.png" width="30px" height="30px"></a>
+        </div>
+        <footer id="main-footer">
+            <p><a href="#">Copyright ⓒ 2021 Ji Eun Yi. All rights reserved.</a></p>
+            <address>Contact webmaster for more information. 010-3124-1680</address>
+        </footer>
+
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d");
+
+            var text1 = "It's me, Ji Eun";
+
+            myContext.font = "bold italic 24pt Lora_Italic";
+            myContext.strokeStyle = "black";
+            myContext.textAlign = "center";
+            myContext.lineWidth = 1;
+            myContext.strokeText(text1, 200, 30);
+            myContext.lineWidth = 2;
+            myContext.strokeText("lineWidth=2", 200, 200);
+
+        </script>
+        
+        <script>
+            document.oncontextmenu = function(e){
+                alert ("우클릭 이용은 불가능합니다.");
+                return false;
+            }
+        </script>    
+    </body>
+</html>

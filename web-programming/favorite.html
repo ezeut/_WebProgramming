@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="default.css"/>
+        <style>
+            .image {transition: all 0.2s linear;}
+            .image:hover img{transform: scale(1.8); transition: all 0.3s;}
+            table {background-color: white; margin-left: 50px; margin-left: 50px;}
+            th, td {border-bottom: 0.5px solid #444444; padding: 10px;}
+        </style>
+        <title>favorite</title>
+    </head>
+    <body onload="printClock() ,printDate()" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+        <header id="header">
+           <a href="index.html"><p>It's me, Ji Eun</p></a>
+        </header>
+        <nav id="navi">
+            <div class="profile">
+                    <a href="index.html"><img src="images/profile_icon/icon.PNG" width="200" height="200"></a>
+            </div>
+            <div class="title">
+                <h1 class="maintitle"><a href="index.html">지은</a></h1>
+                <h2 class="subtitle">
+                    <a href="https://www.instagram.com/ffdd50_/"><img src="images/profile_icon/insta.png" width="30px" height="30px"></a>
+                    <a href="https://www.facebook.com/l23584654/"><img src="images/profile_icon/fb.png" width="30px" height="30px"></a>
+                    <a href="mailto:jg3012@sookmyung.ac.kr"><img src="images/profile_icon/mail.png" width="30px" height="30px"></a>
+                </h2>
+            </div>
+            <div>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="info.html"><span class="menu-title">Info</span></a>
+                    </li></br>
+                    <li class="menu-item">
+                        <a href="work.html"><span class="menu-title">My Work</span></a>
+                    </li></br>
+                    <li class="menu-item">
+                        <a href="favorite.html"><span class="menu-title">My Favorite</span></a>
+                    </li></br>
+                    <li class="menu-item">
+                        <a href="stamp.php"><span class="menu-title">Stamp</span></a>
+                    </li></br>
+                </ul>
+                </br>
+                <div class="today">
+                    <ul>
+                        <h4>current time</h4></br>
+                        <li><div id = "clock"></div></li>
+                        </br><h4>today</h4></br>
+                        <li><div id = "tdate"></div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="wrap">
+            <div class="content">
+                <table>
+                    <caption>My favorite things</br>-------</caption>
+                    <tr>
+                        <th class="image"><img src="images/favorite_photo/1.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/2.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/3.jpg" width="300" height="300"></th>
+                    </tr>
+                    <tr>
+                        <th class="image"><img src="images/favorite_photo/4.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/5.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/6.jpg" width="300" height="300"></th>
+                    </tr>
+                    <tr>
+                        <th class="image"><img src="images/favorite_photo/7.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/8.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/9.jpg" width="300" height="300"></th>
+                    </tr>
+                    <tr>
+                        <th class="image"><img src="images/favorite_photo/10.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/11.jpg" width="300" height="300"></th>
+                        <th class="image"><img src="images/favorite_photo/12.jpg" width="300" height="300"></th>
+                    </tr>
+                </table>                
+            </div>
+        </div>
+        <footer id="main-footer">
+            <p><a href="#">Copyright ⓒ 2021 Ji Eun Yi. All rights reserved.</a></p>
+            <address>Contact webmaster for more information. 010-3124-1680</address>
+        </footer>
+        <script>
+            function printClock() {                
+                var clock = document.getElementById("clock");           
+                var currentDate = new Date();
+               
+                var currentHours = zeros(currentDate.getHours(),2); 
+                var currentMinute = zeros(currentDate.getMinutes() ,2);
+                var currentSeconds =  zeros(currentDate.getSeconds(),2);
+
+                clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds;
+                setTimeout("printClock()",1000);
+            }
+
+            function printDate(){
+                var tdate = document.getElementById("tdate");
+                var currentDate = new Date();
+                var calendar = currentDate.getFullYear() + ". " + (currentDate.getMonth()+1) + ". " + currentDate.getDate() + ". ";
+                tdate.innerHTML = calendar;
+            }
+            
+            function zeros(num, digit){
+                var zero = '';
+                num = num.toString();
+                if(num.length < digit){
+                    for(i = 0; i < digit - num.length; i++){
+                        zero += '0';
+                    }
+                }
+                return zero + num;
+            }
+            document.oncontextmenu = function(e){
+                alert ("우클릭 이용은 불가능합니다.");
+                return false;
+            }
+     </script>
+    </body>
+</html>
